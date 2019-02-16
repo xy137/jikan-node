@@ -1,7 +1,5 @@
 # Jikan-node
 
----
-
 Jikan-node is a node wrapper for the unofficial MAL api, Jikan
 
 ## Installation
