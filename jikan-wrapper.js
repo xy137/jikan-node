@@ -50,10 +50,24 @@ class JikanNode {
      * @param {string} param page, type, status, rated, genre, score, start_date, end_date, genre_exclude
      * @param {string} arg argument for parameter
      */
-    async search(type, title, param, arg) {
+    async search() {
         return await this.request.send(['search', type], {q: title, [param]: arg })
 
     }
 
+    /**
+     * 
+     * @param {string} season summer, fall, winter, spring
+     * @param {integer} year ex. 2019
+     */
+    async findSeason(season, year) {
+        return await this.request.send(['season', season, year])
+    }
+
+    async findSchedule()
+
 }
 
+var b = new JikanNode
+
+b.findSeason('2018', 'summer').then(a => console.log(a), c => console.log(c))
