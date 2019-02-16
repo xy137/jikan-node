@@ -8,7 +8,7 @@ class JikanNode {
 
     /**
      * 
-     * @param {integer} id Anime ID
+     * @param {integer} id anime ID
      * @param {string} request character_staff, episodes, news, pictures, videos, stats, forum, moreinfo, reviews, recommendations, userupdates
      * @param {integer} param can be used to select pages when needed
      */
@@ -18,7 +18,7 @@ class JikanNode {
 
     /**
      * 
-     * @param {integer} id Manga ID 
+     * @param {integer} id manga ID 
      * @param {string} request characters, news, pictures, stats, forum, moreinfo, reviews, recommendations, userupdates 
      * @param {integer} param can be used to select pages when needed 
      */
@@ -28,7 +28,7 @@ class JikanNode {
 
     /**
      * 
-     * @param {integer} id Person ID
+     * @param {integer} id person ID
      * @param {string} request pictures
      */
     async findPerson(id, request) {
@@ -37,7 +37,7 @@ class JikanNode {
 
     /**
      * 
-     * @param {integer} id Character ID
+     * @param {integer} id character ID
      * @param {string} request pictures
      */
     async findCharacter(id, request) {
@@ -45,18 +45,15 @@ class JikanNode {
     }
     /**
      * 
-     * @param {string} type  
-     * @param {*} show 
-     * @param {*} param 
-     * @param {*} arg 
+     * @param {string} type anime/manga/people ect
+     * @param {string} title title 
+     * @param {string} param page, type, status, rated, genre, score, start_date, end_date, genre_exclude
+     * @param {string} arg argument for parameter
      */
-    async search(type, show, param, arg) {
-        return await this.request.send(['search', type], {q: show, [param]: arg })
+    async search(type, title, param, arg) {
+        return await this.request.send(['search', type], {q: title, [param]: arg })
 
     }
 
 }
 
-var b = new JikanNode
-
-b.search('anime', "Grand Blue", "page", "1").then(a => console.log(a), c => console.log(c))
