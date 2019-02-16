@@ -43,14 +43,16 @@ class JikanNode {
     async findCharacter(id, request) {
         return await this.request.send(['character', id, request])
     }
+
     /**
      * 
      * @param {string} type anime/manga/people ect
      * @param {string} title title 
      * @param {string} param page, type, status, rated, genre, score, start_date, end_date, genre_exclude
-     * @param {string} arg argument for parameter
+     * @param {string} arg value for param
+     *
      */
-    async search() {
+    async search(type, title, param, arg) {
         return await this.request.send(['search', type], {q: title, [param]: arg })
 
     }
@@ -64,10 +66,12 @@ class JikanNode {
         return await this.request.send(['season', season, year])
     }
 
-    async findSchedule()
+    async findSchedule(day) {
+        return await this.request.send(['schedule', day])
+    }
 
 }
 
 var b = new JikanNode
 
-b.findSeason('2018', 'summer').then(a => console.log(a), c => console.log(c))
+b.search('anime', 'jojos', 'page', '2').then(a => console.log(a), c => console.log(c))
