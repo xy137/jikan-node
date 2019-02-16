@@ -1,6 +1,6 @@
 const Request = require('./lib/Request')
 
-module.exports = class JikanNode {
+class JikanNode {
 
     constructor() {
         this.request = new Request
@@ -63,7 +63,7 @@ module.exports = class JikanNode {
      * @param {integer} year ex. 2019
      */
     async findSeason(season, year) {
-        return await this.request.send(['season', season, year])
+        return await this.request.send(['season', year, season])
     }
 
     /**
@@ -92,7 +92,7 @@ module.exports = class JikanNode {
      * @param {integer} page page number
      */
     async findGenre(type, id, page) {
-        return await this.request.send(['genre', type, genre, page])
+        return await this.request.send(['genre', type, id, page])
     }
 
     /**
@@ -131,5 +131,4 @@ module.exports = class JikanNode {
     async findClub(id, request) {
         return await this.request.send(['club', id, request ])
     }
-
 }
