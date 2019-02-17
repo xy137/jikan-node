@@ -2,6 +2,8 @@
 
 Jikan-node is a node wrapper for the unofficial MAL api, Jikan
 
+Link to API: https://jikan.docs.apiary.io/
+
 ## Installation
 
 `npm install jikan-node --save`

@@ -1,6 +1,6 @@
 const Request = require('./lib/Request')
 
-class JikanNode {
+module.exports = class JikanNode {
 
     constructor() {
         this.request = new Request
