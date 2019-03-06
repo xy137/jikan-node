@@ -4,6 +4,10 @@ Jikan-node is a node wrapper for the unofficial MAL api, Jikan
 
 Link to API: https://jikan.docs.apiary.io/
 
+Link to genre IDs : https://jikan.moe/docs#advanced-search-genre-constants
+
+Pass `undefined` to skip over args
+
 ## Installation
 
 `npm install jikan-node --save`
