@@ -48,12 +48,12 @@ module.exports = class JikanNode {
      * 
      * @param {string} type anime/manga/people ect
      * @param {string} title title 
-     * @param {string} param page, type, status, rated, genre, score, start_date, end_date, genre_exclude
-     * @param {string} arg value for param
+     * @param {object} param page, type, status, rated, genre, score, start_date, end_date, genre_exclude | ex. {"page": 2, "score": 7}
      *
      */
-    async search(type, title, param, arg) {
-        return await this.request.send(['search', type], {q: title, [param]: arg })
+    async search(type, title, param) {
+        const params = {'q': title, ...param}
+        return await this.request.send(['search', type], params)
 
     }
 
