@@ -1,10 +1,10 @@
 # Jikan-node
 
-Jikan-node is a node wrapper for the unofficial MAL api, Jikan
+Jikan-node is a node (and javascript) wrapper for the unofficial MAL api, Jikan
 
 Link to API: https://jikan.docs.apiary.io/
 
-Link to genre IDs : https://jikan.moe/docs#advanced-search-genre-constants
+Link to genre IDs : https://jikan.docs.apiary.io/#reference/0/search
 
 ## Installation
 

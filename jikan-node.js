@@ -48,7 +48,7 @@ module.exports = class JikanNode {
      * 
      * @param {string} type anime/manga/people ect
      * @param {string} title title 
-     * @param {object} param page, type, status, rated, genre, score, start_date, end_date, genre_exclude | ex. {"page": 2, "score": 7}
+     * @param {object} param page, type, status, rated, genre, score, start_date, end_date, genre_exclude | ex. {page: 2, score: 7}
      *
      */
     async search(type, title, param) {
@@ -117,10 +117,11 @@ module.exports = class JikanNode {
      * 
      * @param {string} username username
      * @param {string} request profile, history, friends, animelist, mangalist
-     * @param {string} data watching, ptw, on hold, ect
+     * @param {string} data watching, ptw, onhold, ect
+     * @param {Object} param page sort search
      */
-    async findUser(username, request, data) {
-        return await this.request.send(['user', username, request, data])
+    async findUser(username, request, data, param) {
+        return await this.request.send(['user', username, request, data], param)
     }
 
     /**
