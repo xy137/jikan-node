@@ -1,6 +1,7 @@
 # Jikan-node
 
-Jikan-node is a node (and javascript) wrapper for the unofficial MAL api, Jikan
+Jikan-node is a promised-based wrapper for the unofficial MyAnimeList (MAL) API, Jikan.
+Can be used in the browser and nodejs. TypeScript supported (and recommended).
 
 Link to API: https://jikan.docs.apiary.io/
 
@@ -53,3 +54,9 @@ findAnime({
   .then(info => console.log(info))
   .catch(err => console.error(err));
 ```
+
+### Methods
+
+All methods beside "search" are prefixed with `find`:
+
+`findAnime`, `findManga`, `findPerson`, `findCharacter`, `findSeason`, `findSchedule`, `findTop`, `findGenre`, `findProducer`, `findMagazine`, `findUser`, `findClub`, and "search"
