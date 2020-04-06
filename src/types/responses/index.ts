@@ -1,0 +1,13 @@
+export type { default as Anime } from "./anime/index";
+export type { default as Manga } from "./manga/index";
+export type { default as Person } from "./person";
+export type { default as Character } from "./character";
+export type { default as Season } from "./season";
+export type { default as Schedule } from "./schedule";
+export type { default as Genre } from "./genre";
+export type { default as Producer } from "./producer";
+export type { default as Magazine } from "./magazine";
+export type { default as Club } from "./club";
+export type { default as Search } from "./search";
+export type { default as Top } from "./top";
+export type { default as User } from "./user";
