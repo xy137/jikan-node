@@ -59,4 +59,4 @@ findAnime({
 
 All methods beside "search" are prefixed with `find`:
 
-`findAnime`, `findManga`, `findPerson`, `findCharacter`, `findSeason`, `findSchedule`, `findTop`, `findGenre`, `findProducer`, `findMagazine`, `findUser`, `findClub`, and "search"
+`findAnime`, `findManga`, `findPerson`, `findCharacter`, `findSeason`, `findSchedule`, `findTop`, `findGenre`, `findProducer`, `findMagazine`, `findUser`, `findClub`, and `search`
