@@ -1,6 +1,6 @@
 {
   "name": "jikan-node",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Wrapper for the unofficial MAL api, Jikan",
   "main": "jikan-node.js",
   "directories": {
