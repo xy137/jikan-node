@@ -27,7 +27,7 @@
     "api"
   ],
   "author": "xy137",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/xy137/jikan-node/issues"
   },
